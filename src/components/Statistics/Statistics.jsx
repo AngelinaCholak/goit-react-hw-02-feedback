@@ -1,8 +1,8 @@
-
+import css from './statistics.module.css'
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
-        <div>
+        <div className={css.statistics}>
             <h2>Statistics</h2>
             {total > 0 ? (
                 <div>
@@ -12,7 +12,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
                     <p>Positive Percentage: {positivePercentage}</p>
             </div>
             ) : (
-                    <p>There is no feedback</p>
+                    <p className={css.noFeedback}>There is no feedback</p>
             )}
         </div>
 
